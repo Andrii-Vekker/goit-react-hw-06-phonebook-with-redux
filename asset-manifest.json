@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Andrii-Vekker/goit-react-hw-06-phonebook-with-redux/static/css/main.7acaea2f.css",
+    "main.js": "/Andrii-Vekker/goit-react-hw-06-phonebook-with-redux/static/js/main.07d3183d.js",
+    "index.html": "/Andrii-Vekker/goit-react-hw-06-phonebook-with-redux/index.html",
+    "main.7acaea2f.css.map": "/Andrii-Vekker/goit-react-hw-06-phonebook-with-redux/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/Andrii-Vekker/goit-react-hw-06-phonebook-with-redux/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
