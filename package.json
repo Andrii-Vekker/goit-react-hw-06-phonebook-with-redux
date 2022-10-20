@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://github.com/Andrii-Vekker/goit-react-hw-06-phonebook-with-redux",
   "dependencies": {
-  "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "formik": "^2.2.9",
@@ -23,7 +23,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:js": "eslint src/**/*.{js,jsx}"
+    "lint:js": "eslint src/**/*.{js,jsx}",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
