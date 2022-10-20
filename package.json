@@ -2,8 +2,9 @@
   "name": "goit-react-hw-06-phonebook-with-redux",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Andrii-Vekker/goit-react-hw-06-phonebook-with-redux",
+  "homepage": "https://andrii-vekker.github.io/goit-react-hw-06-phonebook-with-redux/",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.6",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
