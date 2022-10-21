@@ -2,7 +2,8 @@ import { Formik, ErrorMessage  } from 'formik';
 import { FormContainer, BtnAdd, Label, Span, Input } from './Form.styled';
 import * as yup from 'yup';
 import { nanoid } from 'nanoid';
-import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { addContacts } from 'redux/contactsSlise';
 
 const schema = yup.object().shape({
     name: yup.string().required("Please enter your name"),
@@ -20,12 +21,16 @@ const initialValues = {
         name: '',
     number: "",
 };
-export default function ContactFormrm(propa) {
+export default function ContactFormrm() {
+    const dispatch = useDispatch();
+    const contactsData = useSelector(state => state.contacts.contacts.map(contact => contact.name));
     const handleSubmit = (values, { resetForm }) => {
-        values.id = nanoid()
+        values.id = nanoid();
+       if (!contactsData.includes(values.name)) {
+        dispatch(addContacts(values))
+       }else {alert(`${values.name} is allready in contacts`) }
         resetForm();
-        propa.onSubmit(values);
-    };
+         };
 
     
     return (
@@ -48,7 +53,3 @@ export default function ContactFormrm(propa) {
             </>
     );
 };
-
-ContactFormrm.propTypes = {
-    onSubmit: PropTypes.func.isRequired,
-}

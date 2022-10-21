@@ -1,19 +1,23 @@
 import { Label, FilteredInput, Span} from "../ContactsList/ContactList.styled";
-import PropTypes from 'prop-types';
+import { useDispatch } from "react-redux";
+import { filteredContacts } from "redux/filterSlise";
 
-export default function Filter({filter, handleChange}) {
-    return (
+export default function Filter() {
+    
+    const dispatch = useDispatch();
+
+       const handleChange = (e) => {
+           const { value } = e.target;
+           dispatch(filteredContacts(value));
+    };
+        return (
         <>
             <Label htmlFor="filter">
                 <Span>Find contacts by name</Span>
-                <FilteredInput type="text" name="filter" value={filter} onChange={handleChange} />
+                <FilteredInput type="text" name="filter"  onChange={handleChange} />
                 
             </Label>
         </>
     );
 };
 
-Filter.propTypes = {
-    filter: PropTypes.string.isRequired,
-    handleChange: PropTypes.func.isRequired
-}

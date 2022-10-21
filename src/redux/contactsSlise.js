@@ -8,10 +8,11 @@ export const contactsSlise = createSlice({
     },
     reducers: {
         addContacts(state, action) { 
-
+            
+state.contacts.push(action.payload)
         },
         removeContacts(state, action) {
-            
+           state.contacts =  state.contacts.filter(({id}) => id !== action.payload.id) 
         }
     }
 });
