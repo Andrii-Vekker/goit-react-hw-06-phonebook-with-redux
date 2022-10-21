@@ -1,18 +1,8 @@
-import { useEffect } from "react";
 import ContactFormrm from "./Form/ContactForm";
 import ContactsList from "./ContactsList/ContactsList";
 import Filter from "./Filter/Filter";
-import { useSelector } from "react-redux";
-
-const LC_KEY = "contacts";
 
 export default function App() {
-
-  const contacts = useSelector(state => state.contacts.contacts);
-
-  useEffect(() => {
-    window.localStorage.setItem(LC_KEY, JSON.stringify(contacts));
-  }, [contacts]);
 
   return (
     <div
